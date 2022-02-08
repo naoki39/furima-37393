@@ -38,14 +38,12 @@
 #purchase_historiesテーブル
 | Column         | Type       | Option                         |
 | -------------- | ---------- | ------------------------------ |
-| card_number    | string     | null: false                    |
-| effective_date | string     | null: false                    |
-| security_code  | string     | null: false                    |
 | user           | references | null: false, foreign_key: true |
 | item           | references | null: false, foreign_key: true |
 
 ### Association
-- has_one :item
+- belongs_to :user
+- belongs_to :item
 - has_one :adress
 
 
@@ -61,4 +59,4 @@
 | purchase_history | references | null: false, foreign_key: true |
 
 ### Association
-- has_one :purchase_history
+- belongs_to :purchase_history
