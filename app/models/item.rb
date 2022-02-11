@@ -11,7 +11,7 @@ class Item < ApplicationRecord
     validates :nickname
     validates :info
     validates :image
-    validates :price, format: { with: /\A[0-9]+\z/ }
+    validates :price, format: { with: /\A[0-9]+\z/ }, numericality: {in: 300..9999999 }
   end
 
   validates :category_id, numericality: { other_than: 1 }
