@@ -1,4 +1,4 @@
-class Category < ActiveHash::Base
+class ShippingDay < ActiveHash::Base
   self.data = [
     { id: 1, name: '---' },
     { id: 2, name: '12日で発送' },
@@ -9,4 +9,3 @@ class Category < ActiveHash::Base
   include ActiveHash::Associations
   has_many :items
 end
-d
