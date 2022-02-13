@@ -18,6 +18,12 @@ class ItemsController < ApplicationController
     end
   end
 
+  def show
+  end
+
+  def edit
+  end
+  
   private
 
   def item_params
