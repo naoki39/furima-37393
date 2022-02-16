@@ -14,7 +14,7 @@
 
 ### Association
 - has_many :items
-- has_many :purchase_histories
+- has_many :orders
 
 
 #itemsテーブル
@@ -32,10 +32,10 @@
 
 ### Association
 - belongs_to :user
-- has_one :purchase_history
+- has_one :order
 
 
-#purchase_historiesテーブル
+#ordersテーブル
 | Column         | Type       | Option                         |
 | -------------- | ---------- | ------------------------------ |
 | user           | references | null: false, foreign_key: true |
@@ -56,7 +56,7 @@
 | house_number     | string     | null: false                    |
 | building         | string     |                     
 | telephone_number | string     | null: false                    |
-| purchase_history | references | null: false, foreign_key: true |
+| order            | references | null: false, foreign_key: true |
 
 ### Association
-- belongs_to :purchase_history
+- belongs_to :order
